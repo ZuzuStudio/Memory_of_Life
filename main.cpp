@@ -266,7 +266,7 @@ void Start_Life(Life &map, int time){
 		Clean_Line(length, 0, 0);
 		SetCurrentPos(0,0);   
 		cout << time;
-		Sleep(100);
+		sleep(100);
 		Print_Field(map);
 
 	}

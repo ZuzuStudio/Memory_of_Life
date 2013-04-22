@@ -54,7 +54,9 @@ namespace ccg{
 	void Pause();
 	void ConsoleTitle();
 	void CleanConsol();
+	void sleep(int);
 	int GetKey();
+	int kbhit();
 	int Arrows();
 	void OutS(symbol);
 	char GetC(comand);
