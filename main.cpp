@@ -212,7 +212,7 @@ void Print_Field(Life work){
 
 int Number_nabers (Life work, int pos){
     int nabers=0;
-	int line = pos / work.x -1; 
+	int line = pos / work.x -1;
 	int fpos = pos - 1 - work.x;
     for (int i=0; i<3; ++i){
 		for (int n = 0; n < 3; ++n){
@@ -264,7 +264,7 @@ void Start_Life(Life &map, int time){
 	for(; 0 <= time; time--){
 		Survival(map);
 		Clean_Line(length, 0, 0);
-		SetCurrentPos(0,0);   
+		SetCurrentPos(0,0);
 		cout << time;
 		sleep(100);
 		Print_Field(map);
@@ -284,19 +284,20 @@ void Menu(){
 	bool fl;
 	Life map;
 	char *YN = "NO YES";
+	CleanConsol();
 	cout << "Input width:\n";
 	Choise_Drow(5);
 	cout << '\n';
 	cout << "Input Length:\n";
 	Choise_Drow(5);
 	cout << '\n';
-	cout << "Input namber of staps:\n";
+	cout << "Input number of steps:\n";
 	Choise_Drow(7);
 	cout << '\n';
-	cout << "You want imput map yourself?\n";
+	cout << "Do you want input map yourself?\n";
 	Choise_Drow(5);
 	cout << '\n';
-	map.x = Numberik_Work(100,5,1,2,1); 
+	map.x = Numberik_Work(100,5,1,2,1);
 	map.y = Numberik_Work(100,5,1,7,1);
 	time = Numberik_Work(10000,0,1,12,100);
 	fl = Textik_Work(YN, 3, 1, 17);
@@ -310,6 +311,6 @@ void Menu(){
 
 int main(){
 	Menu();
-	
-	
+
+
 }
